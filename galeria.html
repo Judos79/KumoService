@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galería de Imágenes</title>
+  <style>
+    #gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 20px;
+    }
+    #gallery img {
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Galería de Imágenes Subidas</h1>
+  <p><a href="page-1.html">Subir otra imagen</a></p>
+
+  <div id="gallery"></div>
+
+  <script>
+    const gallery = document.getElementById('gallery');
+
+    function loadImages() {
+      fetch('/images')
+        .then(res => res.json())
+        .then(images => {
+          gallery.innerHTML = '';
+          images.forEach(img => {
+            const imgElem = document.createElement('img');
+            imgElem.src = `/uploads/${img}`;
+            imgElem.alt = img;
+            gallery.appendChild(imgElem);
+          });
+        })
+        .catch(err => {
+          gallery.innerHTML = '<p>Error al cargar la galería.</p>';
+          console.error(err);
+        });
+    }
+
+    window.addEventListener('load', loadImages);
+  </script>
+</body>
+</html>
