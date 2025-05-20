@@ -1,0 +1,102 @@
+body {
+    background: url(https://img.freepik.com/foto-gratis/desvanecimiento-fondo-azul_53876-88684.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(241, 15, 90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#form {
+    width: 320px;
+    padding: 25px;
+    background: rgba(20, 165, 248, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#form h2 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+.input-container i {
+    margin-right: 10px;
+    color: #555;
+}
+
+input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background: #152f6a;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0f2254;
+    transform: scale(1.05);
+}
+
+.extra-links {
+    margin-top: 10px;
+}
+
+.extra-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+#contenedor {
+    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Fondo morado/azul */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+button {
+    background: #ff6b6b; /* Botón rojo */
+    transition: all 0.3s;
+}
+button:hover {
+    transform: scale(1.05); /* Efecto al pasar el mouse */
+}
